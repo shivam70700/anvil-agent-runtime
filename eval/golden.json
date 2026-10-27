@@ -1,0 +1,42 @@
+[
+  {
+    "question": "Where is the state transition validation logic defined?",
+    "expectedFile": "src/types.ts"
+  },
+  {
+    "question": "How are database connections established with PostgreSQL?",
+    "expectedFile": "src/db.ts"
+  },
+  {
+    "question": "How does transitionTask lock rows to prevent concurrent updates?",
+    "expectedFile": "src/taskEngine.ts"
+  },
+  {
+    "question": "Where is claimNextTask implemented using SKIP LOCKED?",
+    "expectedFile": "src/taskEngine.ts"
+  },
+  {
+    "question": "Where is the path traversal defense logic implemented?",
+    "expectedFile": "src/tools/security.ts"
+  },
+  {
+    "question": "Which tool reads UTF-8 content from a repository file?",
+    "expectedFile": "src/tools/readFile.ts"
+  },
+  {
+    "question": "How does the agent loop limit execution to 8 steps?",
+    "expectedFile": "src/agent/loop.ts"
+  },
+  {
+    "question": "Where is the Reciprocal Rank Fusion algorithm implemented?",
+    "expectedFile": "src/search/hybridSearch.ts"
+  },
+  {
+    "question": "Where are the human approval and rejection endpoints located?",
+    "expectedFile": "src/server.ts"
+  },
+  {
+    "question": "Where is the code chunker that creates 40-line chunks with 10-line overlap?",
+    "expectedFile": "src/search/chunker.ts"
+  }
+]

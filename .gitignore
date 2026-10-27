@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+web/node_modules/
+
+# Production build artifacts
+dist/
+web/dist/
+
+# Local environment & secrets
+.env
+*.local
+
+# Logs and test artifacts
+*.log
+coverage/
+test_sandbox/
+patches/*.patch
+!patches/.gitkeep
+
+# System files
+.DS_Store
+Thumbs.db

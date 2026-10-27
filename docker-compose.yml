@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: anvil-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: anvil_user
+      POSTGRES_PASSWORD: anvil_password
+      POSTGRES_DB: anvil_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - anvil_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U anvil_user -d anvil_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  anvil_pgdata:
